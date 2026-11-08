@@ -14,7 +14,9 @@
 body{margin:0;font-family:Heebo,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65}
 .wrap{max-width:980px;margin:0 auto;padding:24px 20px 60px}
 header{display:flex;align-items:center;gap:12px}
-header img{width:44px;height:44px}
+header img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 16px rgba(80,200,255,.3)}
+.emblem{display:block;width:180px;height:180px;border-radius:50%;margin:0 0 26px;box-shadow:0 0 50px rgba(80,200,255,.25),0 0 90px rgba(255,140,0,.15)}
+@media (max-width:720px){.emblem{width:130px;height:130px;margin:0 auto 22px}}
 header b{font-size:20px;letter-spacing:.3px}
 .lang{margin-inline-start:auto;display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:3px}
 .lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:14px;font-weight:700;padding:6px 14px;border-radius:18px;cursor:pointer}
@@ -47,7 +49,7 @@ html[lang="he"] [data-l="en"],html[lang="en"] [data-l="he"]{display:none!importa
 <body>
 <div class="wrap">
 <header>
- <img src="img/logo.png" alt="">
+ <img src="img/logo.png" alt="RabieMan Labs logo">
  <b>RabieMan Labs</b>
  <div class="lang" role="group" aria-label="Language / שפה">
   <button type="button" data-set="he" aria-pressed="true">עברית</button>
@@ -56,6 +58,7 @@ html[lang="he"] [data-l="en"],html[lang="en"] [data-l="he"]{display:none!importa
 </header>
 
 <section class="hero">
+ <img class="emblem" src="img/rabieman-labs.webp" alt="RabieMan Labs logo" width="180" height="180">
  <h1 data-l="he">אפליקציות פרקטיות,<br><span>שעושות סדר בחיים.</span></h1>
  <h1 data-l="en">Practical apps<br><span>that make life simpler.</span></h1>
  <p data-l="he">RabieMan Labs הוא סטודיו עצמאי לפיתוח אפליקציות וכלים חכמים. אנחנו לוקחים מידע שפזור במקומות שונים, ומרכזים אותו באפליקציה אחת ברורה, בעברית, בערבית ובאנגלית.</p>
