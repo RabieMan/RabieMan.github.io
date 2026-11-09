@@ -4,14 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RabieMan Labs – אפליקציות וכלים חכמים</title>
-<meta name="description" content="RabieMan Labs – independent developer of practical Android apps and smart tools. Home of AutoPedia.">
+<meta name="description" content="RabieMan Labs – software engineering, systems architecture, cloud and UX design, turned into practical apps in Hebrew, Arabic and English. Home of AutoPedia.">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0c0f;--card:#11161d;--line:#232c37;--tx:#e7edf3;--mut:#8b96a3;--acc:#ffb02e}
 *{box-sizing:border-box}
 body{margin:0;font-family:Heebo,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65}
+html[lang="ar"] body{font-family:Cairo,Heebo,"Segoe UI",system-ui,sans-serif}
 .wrap{max-width:980px;margin:0 auto;padding:24px 20px 60px}
 header{display:flex;align-items:center;gap:12px}
 header img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 16px rgba(80,200,255,.3)}
@@ -19,15 +20,25 @@ header img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 16px rgba(80,
 @media (max-width:720px){.emblem{width:130px;height:130px;margin:0 auto 22px}}
 header b{font-size:20px;letter-spacing:.3px}
 .lang{margin-inline-start:auto;display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:3px}
-.lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:14px;font-weight:700;padding:6px 14px;border-radius:18px;cursor:pointer}
+.lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:14px;font-weight:700;padding:6px 12px;border-radius:18px;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--acc);color:#111}
+@media (max-width:480px){header b{display:none}.lang button{padding:6px 10px;font-size:13px}}
 .hero{padding:70px 0 40px}
-.hero h1{font-size:clamp(32px,6vw,54px);line-height:1.12;margin:0 0 16px;font-weight:900}
+.hero h1{font-size:clamp(32px,6vw,54px);line-height:1.15;margin:0 0 16px;font-weight:900}
 .hero h1 span{color:var(--acc)}
 .hero p{font-size:18px;color:#c9d2dc;max-width:680px;margin:0}
 h2{font-size:24px;margin:56px 0 14px}
 .about{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 24px;color:#c9d2dc;font-size:16.5px}
 .about ul{margin:10px 0 0;padding-inline-start:20px}
+.caps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cap{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;position:relative;overflow:hidden}
+.cap:after{content:"";position:absolute;inset-inline-end:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(var(--c),transparent 70%);opacity:.18}
+.cap i{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;font-style:normal;font-size:22px;background:#1a212b;border:1px solid var(--line);margin-bottom:12px}
+.cap b{display:block;font-size:16px;line-height:1.35;margin-bottom:6px}
+.cap p{margin:0;color:#aab4bf;font-size:14px;line-height:1.55}
+.cap small{display:block;margin-top:10px;color:var(--mut);font-size:12px}
+@media (max-width:860px){.caps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.caps{grid-template-columns:1fr}}
 .app{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
 .app .top{display:flex;align-items:center;gap:14px;margin-bottom:10px}
 .app .top img{width:64px;height:64px;border-radius:16px}
@@ -36,6 +47,11 @@ h2{font-size:24px;margin:56px 0 14px}
 .app p{margin:6px 0 12px;color:#c9d2dc}
 .app ul{margin:0 0 16px;padding-inline-start:20px;color:#c9d2dc;font-size:15px}
 .app .shot{width:100%;border-radius:26px;border:8px solid #222a35}
+.lab{display:flex;gap:18px;align-items:center;margin-top:14px;background:linear-gradient(135deg,#121823,#0e1217);border:1px dashed #33404d;border-radius:20px;padding:20px 22px}
+.lab .li{flex:none;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,#60a5fa,#7c3aed)}
+.lab h3{margin:0 0 4px;font-size:18px}
+.lab p{margin:0;color:#aab4bf;font-size:14.5px}
+.lab .tag{display:inline-block;margin-inline-start:8px;vertical-align:middle;font-size:11.5px;font-weight:700;color:#a5b4fc;border:1px solid #3b3f74;background:#171a33;border-radius:20px;padding:2px 10px}
 .btn{display:inline-block;background:var(--acc);color:#111;text-decoration:none;font-weight:800;border-radius:12px;padding:11px 20px;margin-inline-end:8px}
 .btn.ghost{background:none;color:var(--tx);border:1px solid var(--line)}
 .cbox{display:flex;gap:22px;align-items:flex-start;background:linear-gradient(135deg,#141b24,#0f1419);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;overflow:hidden}
@@ -44,12 +60,10 @@ h2{font-size:24px;margin:56px 0 14px}
 .ctx{position:relative}.ctx h3{margin:2px 0 8px;font-size:20px}.ctx p{margin:0 0 18px;color:#aab4bf;line-height:1.6}
 .cact{display:flex;flex-wrap:wrap;gap:10px}.cact .btn{margin:0;font:inherit;font-weight:800;cursor:pointer}.cact .ghost{font-weight:600}.cmOk{color:#4ade80}
 @media(max-width:600px){.cbox{flex-direction:column;padding:22px}.cact .btn{flex:1 1 100%;text-align:center}}
-.soon{border:1px dashed var(--line);border-radius:18px;padding:18px 22px;color:var(--mut);margin-top:14px}
-.contact a{color:#9ccbff}
 footer{border-top:1px solid var(--line);margin-top:56px;padding-top:16px;color:var(--mut);font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--mut)}
-html[lang="he"] [data-l="en"],html[lang="en"] [data-l="he"]{display:none!important}
-@media (max-width:720px){.app{grid-template-columns:1fr}.app .shot{max-width:240px;justify-self:center}.hero{padding:44px 0 24px}}
+html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l="en"]),html[lang="ar"] [data-l]:not([data-l="ar"]){display:none!important}
+@media (max-width:720px){.app{grid-template-columns:1fr}.app .shot{max-width:240px;justify-self:center}.hero{padding:44px 0 24px}.lab{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -57,72 +71,106 @@ html[lang="he"] [data-l="en"],html[lang="en"] [data-l="he"]{display:none!importa
 <header>
  <img src="img/logo.png" alt="RabieMan Labs logo">
  <b>RabieMan Labs</b>
- <div class="lang" role="group" aria-label="Language / שפה">
+ <div class="lang" role="group" aria-label="Language / שפה / اللغة">
   <button type="button" data-set="he" aria-pressed="true">עברית</button>
+  <button type="button" data-set="ar" aria-pressed="false">العربية</button>
   <button type="button" data-set="en" aria-pressed="false">English</button>
  </div>
 </header>
 
 <section class="hero">
  <img class="emblem" src="img/rabieman-labs.webp" alt="RabieMan Labs logo" width="180" height="180">
- <h1 data-l="he">אפליקציות פרקטיות,<br><span>שעושות סדר בחיים.</span></h1>
- <h1 data-l="en">Practical apps<br><span>that make life simpler.</span></h1>
- <p data-l="he">RabieMan Labs הוא סטודיו עצמאי לפיתוח אפליקציות וכלים חכמים. אנחנו לוקחים מידע שפזור במקומות שונים, ומרכזים אותו באפליקציה אחת ברורה, בעברית, בערבית ובאנגלית.</p>
- <p data-l="en">RabieMan Labs is an independent studio building Android apps and smart tools. We take information that is scattered across many places and bring it together in one clear app, in Hebrew, Arabic and English.</p>
+ <h1 data-l="he">הנדסת תוכנה מתקדמת.<br><span>חוויית משתמש מוקפדת.</span></h1>
+ <h1 data-l="ar">هندسة برمجيات متقدمة.<br><span>وتجربة مستخدم متقنة.</span></h1>
+ <h1 data-l="en">Professional-grade engineering.<br><span>Crafted user experience.</span></h1>
+ <p data-l="he">RabieMan Labs היא מעבדת פיתוח וחדשנות המשלבת ניסיון רב-שנים בהנדסת תוכנה, ארכיטקטורת מערכות וענן, בינה מלאכותית ועיצוב חוויית משתמש (UI/UX) – ליצירת מוצרים דיגיטליים חכמים, מרהיבים ונגישים בעברית, בערבית ובאנגלית.</p>
+ <p data-l="ar">RabieMan Labs استوديو لتطوير البرمجيات والابتكار يجمع بين سنوات طويلة من الخبرة في هندسة البرمجيات، بنية الأنظمة والسحابة، الذكاء الاصطناعي، وتصميم واجهات وتجربة المستخدم (UI/UX) – لابتكار منتجات رقمية ذكية ومتقنة بالعربية والعبرية والإنجليزية.</p>
+ <p data-l="en">RabieMan Labs is a software innovation studio combining years of deep expertise in software engineering, cloud architecture, AI and visual UI/UX design – building powerful, intuitive digital products in Hebrew, Arabic and English.</p>
 </section>
 
 <h2 data-l="he">אודות</h2>
+<h2 data-l="ar">من نحن</h2>
 <h2 data-l="en">About</h2>
 <div class="about">
  <div data-l="he">
-  <p style="margin:0">מאחורי RabieMan Labs עומד מפתח עצמאי מישראל, שבונה אפליקציות וכלים מבוססי נתונים ובינה מלאכותית. העקרונות שלנו:</p>
-  <ul><li>מידע ממקורות פתוחים ורשמיים, עם ציון מקור</li><li>בלי איסוף מידע אישי ובלי הרשמה מיותרת</li><li>ממשק פשוט ונגיש, בשלוש שפות</li></ul>
+  <p style="margin:0">מאחורי RabieMan Labs עומד מהנדס תוכנה וארכיטקט מערכות עתיר ניסיון, המביא סטנדרטים מקצועיים של התעשייה אל עולם האפליקציות והמוצרים העצמאיים. השילוב תחת קורת גג אחת של הנדסת קוד מעמיקה, תשתיות ענן, עיצוב גרפי והבנה עמוקה של חוויית המשתמש מאפשר לבנות מוצרים שלמים, מהירים ומוקפדים עד הפרט האחרון:</p>
+  <ul><li>ארכיטקטורה מודרנית, ביצועים גבוהים ואמינות הנדסית ללא פשרות</li><li>שילוב הדוק בין טכנולוגיה מורכבת (AI, תלת-ממד ודאטה) לעיצוב ממשק נקי ואינטואיטיבי</li><li>פרטיות כברירת מחדל – רק המידע ההכרחי, בלי הרשמות מיותרות</li></ul>
+ </div>
+ <div data-l="ar">
+  <p style="margin:0">يقف وراء RabieMan Labs مهندس برمجيات ومعماري أنظمة ذو خبرة واسعة، ينقل المعايير المهنية للصناعة إلى عالم التطبيقات والمنتجات المستقلة. إن الجمع بين الهندسة البرمجية العميقة، البنية السحابية، التصميم الجرافيكي، والفهم العميق لتجربة المستخدم يتيح بناء منتجات متكاملة، سريعة ومتقنة حتى أدق التفاصيل:</p>
+  <ul><li>بنية برمجية حديثة، أداء عالٍ، وموثوقية هندسية بلا تنازلات</li><li>دمج سلس بين التقنيات المعقدة (الذكاء الاصطناعي، الرسوميات ثلاثية الأبعاد والبيانات) والتصميم البصري البديهي</li><li>الخصوصية أولاً – فقط المعلومات الضرورية، دون تسجيل غير ضروري</li></ul>
  </div>
  <div data-l="en">
-  <p style="margin:0">RabieMan Labs is run by an independent developer from Israel who builds data-driven and AI-powered apps and tools. Our principles:</p>
-  <ul><li>Data from open and official sources, always credited</li><li>No personal data collection and no needless sign-ups</li><li>A simple, accessible interface in three languages</li></ul>
+  <p style="margin:0">Founded by a seasoned software engineer and systems architect, RabieMan Labs brings professional industry standards to independent digital products. By uniting deep engineering and cloud architecture with graphic design and human-centred UX under one roof, we craft complete, high-performance applications refined down to the smallest detail:</p>
+  <ul><li>Modern architecture, high performance and uncompromising engineering quality</li><li>A seamless fusion of complex tech (AI, 3D and data) with clean, intuitive visual design</li><li>Privacy-first by design – only the data that's truly needed, no unnecessary sign-ups</li></ul>
  </div>
 </div>
 
+<h2 data-l="he">ניסיון ומומחיות</h2>
+<h2 data-l="ar">الخبرة والتخصص</h2>
+<h2 data-l="en">Experience &amp; expertise</h2>
+<div class="caps">
+ <div class="cap" style="--c:#60a5fa"><i>☁️</i>
+  <b data-l="he">ארכיטקטורת תוכנה וענן</b><b data-l="ar">هندسة البرمجيات والسحابة</b><b data-l="en">Software &amp; cloud architecture</b>
+  <p data-l="he">תכנון ופיתוח מערכות מקצה לקצה, תשתיות שגדלות עם המוצר וקוד נקי ויעיל ברמה הנדסית גבוהה.</p><p data-l="ar">تصميم وتطوير أنظمة متكاملة وبنية سحابية قابلة للتوسع ببرمجيات نظيفة وعالية الكفاءة.</p><p data-l="en">End-to-end system design, scalable cloud infrastructure, and clean, resilient code built to rigorous engineering standards.</p>
+  <small dir="ltr">Cloud · System Design · Full-Stack</small></div>
+ <div class="cap" style="--c:#34d399"><i>🎨</i>
+  <b data-l="he">עיצוב גרפי וחוויית משתמש</b><b data-l="ar">التصميم الجرافيكي وتجربة المستخدم</b><b data-l="en">UI/UX &amp; visual design</b>
+  <p data-l="he">עיצוב ממשקים מרהיבים, מערכות עיצוב מוקפדות וחוויית משתמש אינטואיטיבית, המותאמת באופן טבעי לשלוש שפות.</p><p data-l="ar">تصميم واجهات جذابة وتجربة استخدام سلسة وبديهية مصممة بشكل طبيعي بثلاث لغات.</p><p data-l="en">Striking visual interfaces, cohesive design systems and intuitive user journeys, crafted natively in three languages.</p>
+  <small dir="ltr">UI/UX · Visual Craft · HE / AR / EN</small></div>
+ <div class="cap" style="--c:#ffb02e"><i>🧊</i>
+  <b data-l="he">תלת-ממד והדמיות אינטראקטיביות</b><b data-l="ar">رسوميات ثلاثية الأبعاد ومحاكاة تفاعلية</b><b data-l="en">3D &amp; interactive simulations</b>
+  <p data-l="he">חוויות תלת-ממד אינטראקטיביות בזמן אמת, שהופכות מערכות הנדסיות מורכבות לחוויה חיה וברורה.</p><p data-l="ar">تجارب تفاعلية ثلاثية الأبعاد في الوقت الفعلي تحوّل الأنظمة الهندسية المعقدة إلى تجربة بصرية حية وواضحة.</p><p data-l="en">Real-time interactive 3D experiences that turn complex mechanical and technical concepts into something vivid and clear.</p>
+  <small dir="ltr">Three.js · WebGL · Interactive 3D</small></div>
+ <div class="cap" style="--c:#a78bfa"><i>🤖</i>
+  <b data-l="he">בינה מלאכותית ואוטומציה</b><b data-l="ar">الذكاء الاصطناعي والأتمتة</b><b data-l="en">AI &amp; automation</b>
+  <p data-l="he">שילוב מודלי AI ואוטומציות חכמות בתוך המוצרים, כדי לחסוך זמן ולהפוך מידע מורכב לפשוט ושימושי.</p><p data-l="ar">دمج نماذج الذكاء الاصطناعي والأتمتة الذكية داخل المنتجات لتوفير الوقت وتحويل المعلومات المعقدة إلى بسيطة ومفيدة.</p><p data-l="en">Building AI models and smart automation into products – saving time and turning complex information into something simple and useful.</p>
+  <small dir="ltr">AI Workflows · Automation · APIs</small></div>
+</div>
+
 <h2 data-l="he">האפליקציות שלנו</h2>
+<h2 data-l="ar">تطبيقاتنا</h2>
 <h2 data-l="en">Our apps</h2>
 <article class="app">
  <div>
-  <div class="top"><img src="img/autopedia.png" alt=""><div><h3>AutoPedia</h3><span class="tag" data-l="he">בקרוב ב-Google Play</span><span class="tag" data-l="en">Coming soon to Google Play</span></div></div>
+  <div class="top"><img src="img/autopedia.png" alt=""><div><h3>AutoPedia</h3><span class="tag" data-l="he">בקרוב ב-Google Play</span><span class="tag" data-l="ar">قريبًا على Google Play</span><span class="tag" data-l="en">Coming soon to Google Play</span></div></div>
   <p data-l="he">כל מה שצריך לדעת על רכב, באפליקציה אחת.</p>
+  <p data-l="ar">كل ما تحتاج معرفته عن السيارة، في تطبيق واحد.</p>
   <p data-l="en">Everything you need to know about a car, in one app.</p>
   <ul data-l="he"><li>בדיקת רכב לפי מספר רישוי, גם בסריקה במצלמה</li><li>ריקולים פתוחים, טסט, ק"מ, היסטוריית בעלות ומחיר מחירון</li><li>בדיקה לפני קנייה ותזכורות לחידוש רישיון</li><li>מוסך תלת-ממד שמסביר כל חלק ברכב</li></ul>
+  <ul data-l="ar"><li>فحص السيارة حسب رقم اللوحة، كتابةً أو بالمسح بالكاميرا</li><li>الاستدعاءات المفتوحة، الفحص، الكيلومترات، تاريخ الملكية والسعر</li><li>فحص قبل الشراء وتذكيرات تجديد الترخيص</li><li>ورشة ثلاثية الأبعاد تشرح كل قطعة في السيارة</li></ul>
   <ul data-l="en"><li>Licence-plate lookup, typed or scanned</li><li>Open recalls, test, mileage, ownership history and list price</li><li>Pre-purchase check and licence-renewal reminders</li><li>A 3D workshop that explains every part of the car</li></ul>
-  <a class="btn" href="https://rabieman.github.io/autopedia-site/"><span data-l="he">לאתר האפליקציה</span><span data-l="en">App website</span></a>
-  <a class="btn ghost" href="https://rabieman.github.io/autopedia-site/privacy.html"><span data-l="he">פרטיות</span><span data-l="en">Privacy</span></a>
+  <a class="btn" href="https://rabieman.github.io/autopedia-site/"><span data-l="he">לאתר האפליקציה</span><span data-l="ar">موقع التطبيق</span><span data-l="en">App website</span></a>
+  <a class="btn ghost" href="https://rabieman.github.io/autopedia-site/privacy.html"><span data-l="he">פרטיות</span><span data-l="ar">الخصوصية</span><span data-l="en">Privacy</span></a>
  </div>
- <img class="shot" src="img/autopedia-shot.jpg?v=2" alt="AutoPedia – מוסך תלת-ממד">
+ <img class="shot" src="img/autopedia-shot.jpg?v=2" alt="AutoPedia">
 </article>
-<div class="soon"><span data-l="he">אפליקציות נוספות בדרך.</span><span data-l="en">More apps are on the way.</span></div>
 
 <h2 data-l="he">יצירת קשר</h2>
+<h2 data-l="ar">تواصل معنا</h2>
 <h2 data-l="en">Contact</h2>
 <div class="cbox">
  <div class="cico" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></div>
  <div class="ctx">
-  <h3><span data-l="he">יש שאלה, רעיון או הצעה לשיתוף פעולה?</span><span data-l="en">A question, an idea or a partnership in mind?</span></h3>
-  <p><span data-l="he">נשמח לשמוע ממך. משוב על האפליקציות, דיווח על תקלה או כל פנייה אחרת – אנחנו עונים בדרך כלל תוך יום-יומיים.</span><span data-l="en">We'd love to hear from you – app feedback, a bug report or anything else. We usually reply within a day or two.</span></p>
+  <h3><span data-l="he">יש שאלה, רעיון או הצעה לשיתוף פעולה?</span><span data-l="ar">لديك سؤال أو فكرة أو اقتراح للتعاون؟</span><span data-l="en">A question, an idea or a partnership in mind?</span></h3>
+  <p><span data-l="he">נשמח לשמוע ממך. משוב על האפליקציות, דיווח על תקלה או כל פנייה אחרת – אנחנו עונים בדרך כלל תוך יום-יומיים.</span><span data-l="ar">يسعدنا أن نسمع منك – ملاحظات على التطبيقات، بلاغ عن عطل أو أي استفسار آخر. نردّ عادةً خلال يوم أو يومين.</span><span data-l="en">We'd love to hear from you – app feedback, a bug report or anything else. We usually reply within a day or two.</span></p>
   <div class="cact">
-   <a class="btn" href="mailto:rabieman.labs@gmail.com"><span data-l="he">שליחת מייל</span><span data-l="en">Send an e-mail</span></a>
-   <button class="btn ghost" type="button" id="copyMail" title="Copy · העתקה">📋 <span class="cmTx" dir="ltr">rabieman.labs@gmail.com</span> <span class="cmOk" hidden>✓</span></button>
+   <a class="btn" href="mailto:rabieman.labs@gmail.com"><span data-l="he">שליחת מייל</span><span data-l="ar">إرسال بريد</span><span data-l="en">Send an e-mail</span></a>
+   <button class="btn ghost" type="button" id="copyMail" title="Copy · העתקה · نسخ">📋 <span class="cmTx" dir="ltr">rabieman.labs@gmail.com</span> <span class="cmOk" hidden>✓</span></button>
   </div>
  </div>
 </div>
 
-<footer><span>© 2026 RabieMan Labs</span><a href="https://rabieman.github.io/autopedia-site/privacy.html">AutoPedia – <span data-l="he">מדיניות פרטיות</span><span data-l="en">Privacy policy</span></a><a href="https://rabieman.github.io/autopedia-site/terms.html">AutoPedia – <span data-l="he">תנאי שימוש</span><span data-l="en">Terms of use</span></a></footer>
+<footer><span>© 2026 RabieMan Labs</span><a href="https://rabieman.github.io/autopedia-site/privacy.html">AutoPedia – <span data-l="he">מדיניות פרטיות</span><span data-l="ar">سياسة الخصوصية</span><span data-l="en">Privacy policy</span></a><a href="https://rabieman.github.io/autopedia-site/terms.html">AutoPedia – <span data-l="he">תנאי שימוש</span><span data-l="ar">شروط الاستخدام</span><span data-l="en">Terms of use</span></a></footer>
 </div>
 <script>
 (function(){
  var root=document.documentElement,btns=document.querySelectorAll('.lang button');
- function set(l){root.lang=l;root.dir=l==='he'?'rtl':'ltr';btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});try{localStorage.setItem('rl_lang',l)}catch(e){}}
+ var TITLES={he:'RabieMan Labs – אפליקציות וכלים חכמים',ar:'RabieMan Labs – تطبيقات وأدوات ذكية',en:'RabieMan Labs – Practical apps & smart tools'};
+ function set(l){root.lang=l;root.dir=l==='en'?'ltr':'rtl';document.title=TITLES[l]||TITLES.he;btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});try{localStorage.setItem('rl_lang',l)}catch(e){}}
  var saved=null;try{saved=localStorage.getItem('rl_lang')}catch(e){}
  var nav=(navigator.language||'he').toLowerCase();
- set(saved||(nav.indexOf('he')===0||nav.indexOf('iw')===0?'he':'en'));
+ set(saved||(nav.indexOf('he')===0||nav.indexOf('iw')===0?'he':nav.indexOf('ar')===0?'ar':'en'));
  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
  var cm=document.getElementById('copyMail');if(cm)cm.addEventListener('click',function(){var ok=cm.querySelector('.cmOk');try{navigator.clipboard.writeText('rabieman.labs@gmail.com').then(function(){ok.hidden=false;setTimeout(function(){ok.hidden=true},1600)})}catch(e){location.href='mailto:rabieman.labs@gmail.com'}});
 })();
