@@ -17,7 +17,8 @@ html[lang="ar"] body{font-family:Cairo,Heebo,"Segoe UI",system-ui,sans-serif}
 header{display:flex;align-items:center;gap:12px}
 header img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 16px rgba(80,200,255,.3)}
 .emblem{display:block;width:180px;height:180px;border-radius:50%;margin:0 0 26px;box-shadow:0 0 50px rgba(80,200,255,.25),0 0 90px rgba(255,140,0,.15)}
-@media (max-width:720px){.emblem{width:130px;height:130px;margin:0 auto 22px}}
+.hrow{display:flex;align-items:center;gap:36px;margin-bottom:20px}.hrow .emblem{flex:none;margin:0}.hrow h1{margin:0}
+@media (max-width:720px){.hrow{flex-direction:column;align-items:flex-start;gap:22px}.hrow .emblem{width:130px;height:130px;margin:0 auto}}
 header b{font-size:20px;letter-spacing:.3px}
 .lang{margin-inline-start:auto;display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:3px}
 .lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:14px;font-weight:700;padding:6px 12px;border-radius:18px;cursor:pointer}
@@ -79,10 +80,14 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
 </header>
 
 <section class="hero">
+ <div class="hrow">
  <img class="emblem" src="img/rabieman-labs.webp" alt="RabieMan Labs logo" width="180" height="180">
+ <div>
  <h1 data-l="he">הנדסת תוכנה מתקדמת.<br><span>חוויית משתמש מוקפדת.</span></h1>
  <h1 data-l="ar">هندسة برمجيات متقدمة.<br><span>وتجربة مستخدم متقنة.</span></h1>
  <h1 data-l="en">Professional-grade engineering.<br><span>Crafted user experience.</span></h1>
+ </div>
+ </div>
  <p data-l="he">RabieMan Labs היא מעבדת פיתוח וחדשנות המשלבת ניסיון רב-שנים בהנדסת תוכנה, ארכיטקטורת מערכות וענן, בינה מלאכותית ועיצוב חוויית משתמש (UI/UX) – ליצירת מוצרים דיגיטליים חכמים, מרהיבים ונגישים בעברית, בערבית ובאנגלית.</p>
  <p data-l="ar">RabieMan Labs استوديو لتطوير البرمجيات والابتكار يجمع بين سنوات طويلة من الخبرة في هندسة البرمجيات، بنية الأنظمة والسحابة، الذكاء الاصطناعي، وتصميم واجهات وتجربة المستخدم (UI/UX) – لابتكار منتجات رقمية ذكية ومتقنة بالعربية والعبرية والإنجليزية.</p>
  <p data-l="en">RabieMan Labs is a software innovation studio combining years of deep expertise in software engineering, cloud architecture, AI and visual UI/UX design – building powerful, intuitive digital products in Hebrew, Arabic and English.</p>
