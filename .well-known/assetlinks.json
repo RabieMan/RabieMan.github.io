@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rabieman.tabumap",
+      "sha256_cert_fingerprints": [
+        "33:FE:71:C2:4F:ED:B5:80:25:0B:D2:10:53:92:1F:B9:F8:BB:AC:82:B7:F0:56:B9:DA:88:A7:71:AC:BE:9E:08"
+      ]
+    }
+  }
+]
