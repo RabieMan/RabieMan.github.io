@@ -4,19 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>הצהרת נגישות – RabieMan Labs</title>
-<meta name="description" content="הצהרת הנגישות של RabieMan Labs: מה עשינו, מגבלות ידועות ודרכי פנייה.">
+<meta name="description" content="Accessibility statement – RabieMan Labs | הצהרת נגישות | بيان إمكانية الوصول">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0c0f;--card:#11161d;--line:#232c37;--tx:#e7edf3;--mut:#8b96a3;--acc:#ffb02e}
 *{box-sizing:border-box}
 body{margin:0;font-family:Heebo,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65}
+html[lang="ar"] body{font-family:Cairo,Heebo,"Segoe UI",system-ui,sans-serif}
 .wrap{max-width:760px;margin:0 auto;padding:24px 20px 60px}
 header{display:flex;align-items:center;gap:12px}
 header img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 16px rgba(80,200,255,.3)}
 header b{font-size:20px;letter-spacing:.3px}
 header a{color:inherit;text-decoration:none;display:flex;align-items:center;gap:12px}
+.lang{margin-inline-start:auto;display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:3px}
+.lang button{background:none;border:0;color:var(--mut);font:inherit;font-size:14px;font-weight:700;padding:6px 12px;border-radius:18px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--acc);color:#111}
+@media (max-width:480px){header b{display:none}.lang button{padding:6px 10px;font-size:13px}}
 h1{font-size:30px;margin:36px 0 4px}
 .upd{color:var(--mut);margin:0 0 28px;font-size:14px}
 h2{font-size:20px;margin:32px 0 8px;color:var(--acc)}
@@ -27,14 +32,25 @@ ul,ol{padding-inline-start:22px}
 footer{border-top:1px solid var(--line);margin-top:56px;padding-top:16px;color:var(--mut);font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--mut)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l="en"]),html[lang="ar"] [data-l]:not([data-l="ar"]){display:none!important}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header><a href="./"><img src="img/logo.png" alt=""><b>RabieMan Labs</b></a></header>
+<header>
+ <a href="./"><img src="img/logo.png" alt=""><b>RabieMan Labs</b></a>
+ <div class="lang" role="group" aria-label="Language / שפה / اللغة">
+  <button type="button" data-set="he" aria-pressed="true">עברית</button>
+  <button type="button" data-set="ar" aria-pressed="false">العربية</button>
+  <button type="button" data-set="en" aria-pressed="false">English</button>
+ </div>
+</header>
+
 <main>
+<!-- ===================== עברית ===================== -->
+<section data-l="he" lang="he">
 <h1>הצהרת נגישות</h1>
-<p class="upd">עדכון אחרון: 18 בנובמבר 2026</p>
+<p class="upd">עדכון אחרון: 25 בנובמבר 2026</p>
 
 <p>RabieMan Labs מייחסת חשיבות רבה לשירות שוויוני ונגיש לכל המשתמשים, כולל אנשים עם מוגבלויות. אנו פועלים כדי שהאתרים והאפליקציות שלנו יהיו נוחים לשימוש עבור כל אדם.</p>
 
@@ -65,8 +81,94 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
 <b>דואר אלקטרוני:</b> <a href="mailto:rabieman.labs@gmail.com" dir="ltr">rabieman.labs@gmail.com</a><br>
 <b>מתוך האפליקציות:</b> בתפריט "אודות" ← "יצירת קשר ומשוב"</p>
 </div>
-</main>
-<footer><span>© 2026 RabieMan Labs</span><a href="./">דף הבית</a></footer>
+</section>
+
+<!-- ===================== العربية ===================== -->
+<section data-l="ar" lang="ar">
+<h1>بيان إمكانية الوصول</h1>
+<p class="upd">آخر تحديث: 25 تشرين الثاني 2026</p>
+
+<p>تولي RabieMan Labs أهمية كبيرة لتقديم خدمة متساوية ومتاحة لجميع المستخدمين، بمن فيهم الأشخاص ذوو الإعاقة. نعمل لكي تكون مواقعنا وتطبيقاتنا سهلة الاستخدام لكل شخص.</p>
+
+<h2>ما الذي قمنا به</h2>
+<p>نعمل على ملاءمة المواقع والتطبيقات لأنظمة المساواة في الحقوق للأشخاص ذوي الإعاقة (ملاءمات إتاحة الخدمة)، 2013، وللمواصفة الإسرائيلية 5568 (المبنية على WCAG 2.0 بمستوى AA). لم تخضع هذه الملاءمة بعد لفحص خارجي، ونحن نواصل تحسينها.</p>
+<ul>
+<li>المواقع ملائمة للهواتف والأجهزة اللوحية والحواسيب، ومدعومة في المتصفحات الشائعة.</li>
+<li>الواجهة متوفرة بالعربية والعبرية والإنجليزية، مع اتجاه كتابة مناسب لكل لغة.</li>
+<li>نعرض المعلومات الأساسية كنص أيضًا، وليس بشكل مرئي فقط.</li>
+</ul>
+
+<h2>قيود معروفة في إمكانية الوصول</h2>
+<p>بعض المكوّنات في تطبيقاتنا مرئية بطبيعتها، مثل الخرائط التفاعلية وصور الأقمار الصناعية والمحاكاة ثلاثية الأبعاد، ولا يمكن الوصول إليها بالكامل عبر قارئات الشاشة.</p>
+<p>كبديل، يمكن قراءة المعلومات الأساسية المعروضة في هذه المكوّنات كنص أيضًا في بطاقات المعلومات داخل التطبيق. إذا واجهت صعوبة في فهم معلومات معروضة بشكل مرئي، تواصل معنا وسنرسلها إليك بصيغة بديلة.</p>
+
+<h2>ترتيبات الإتاحة المادية</h2>
+<p>تعمل RabieMan Labs عبر الإنترنت فقط، ولا يوجد لديها استقبال للجمهور. يمكن التواصل معنا عبر البريد الإلكتروني أو من داخل التطبيق.</p>
+
+<h2>التواصل بخصوص إمكانية الوصول</h2>
+<p>واجهت مشكلة، أو لديك اقتراح للتحسين؟ يسعدنا أن نسمع منك. لكي نتمكن من معالجة طلبك بسرعة، اكتب لنا:</p>
+<ol>
+<li>ما هي المشكلة.</li>
+<li>في أي تطبيق أو أي صفحة حدثت.</li>
+<li>أي جهاز ونظام تشغيل ومتصفح استخدمت.</li>
+</ol>
+<div class="contact">
+<p><b>منسّق الإتاحة:</b> RabieMan Labs<br>
+<b>البريد الإلكتروني:</b> <a href="mailto:rabieman.labs@gmail.com" dir="ltr">rabieman.labs@gmail.com</a><br>
+<b>من داخل التطبيقات:</b> في قائمة «حول» ← «تواصل وملاحظات»</p>
 </div>
+</section>
+
+<!-- ===================== English ===================== -->
+<section data-l="en" lang="en">
+<h1>Accessibility statement</h1>
+<p class="upd">Last updated: 25 November 2026</p>
+
+<p>RabieMan Labs is committed to providing an equal and accessible service to all users, including people with disabilities. We work to make our websites and apps easy to use for everyone.</p>
+
+<h2>What we have done</h2>
+<p>We are working to bring our websites and apps in line with Israel's Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 2013, and Israeli Standard SI 5568 (based on WCAG 2.0, level AA). This has not yet been verified by an external audit, and we keep improving it.</p>
+<ul>
+<li>The websites work on phones, tablets and computers, and are supported in the common browsers.</li>
+<li>The interface is available in Hebrew, Arabic and English, with the right text direction for each language.</li>
+<li>Key information is also presented as text, not only visually.</li>
+</ul>
+
+<h2>Known accessibility limitations</h2>
+<p>Some parts of our apps are visual by nature, such as interactive maps, satellite imagery and 3D simulations, and are not fully accessible to screen readers.</p>
+<p>As an alternative, the key information shown in these parts can also be read as text in the app's information cards. If you find it hard to understand information that is shown visually, contact us and we will send it to you in an alternative format.</p>
+
+<h2>Physical accessibility</h2>
+<p>RabieMan Labs operates online only and does not receive visitors in person. You can reach us by e-mail or from within the apps.</p>
+
+<h2>Accessibility enquiries</h2>
+<p>Found a problem, or have a suggestion for improvement? We'd love to hear from you. To help us handle your request quickly, please tell us:</p>
+<ol>
+<li>What the problem is.</li>
+<li>In which app or on which page it happened.</li>
+<li>Which device, operating system and browser you used.</li>
+</ol>
+<div class="contact">
+<p><b>Accessibility coordinator:</b> RabieMan Labs<br>
+<b>E-mail:</b> <a href="mailto:rabieman.labs@gmail.com">rabieman.labs@gmail.com</a><br>
+<b>From within the apps:</b> "About" menu → "Contact &amp; feedback"</p>
+</div>
+</section>
+</main>
+
+<footer><span>© 2026 RabieMan Labs</span><a href="./"><span data-l="he">דף הבית</span><span data-l="ar">الصفحة الرئيسية</span><span data-l="en">Home</span></a></footer>
+</div>
+<script>
+(function(){
+ var root=document.documentElement,btns=document.querySelectorAll('.lang button');
+ var TITLES={he:'הצהרת נגישות – RabieMan Labs',ar:'بيان إمكانية الوصول – RabieMan Labs',en:'Accessibility statement – RabieMan Labs'};
+ function set(l){if(!TITLES[l])l='he';root.lang=l;root.dir=l==='en'?'ltr':'rtl';document.title=TITLES[l];btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});try{localStorage.setItem('rl_lang',l)}catch(e){}}
+ var q=null;try{q=new URLSearchParams(location.search).get('lang')}catch(e){}
+ var saved=null;try{saved=localStorage.getItem('rl_lang')}catch(e){}
+ var nav=(navigator.language||'he').toLowerCase();
+ set(q||saved||(nav.indexOf('he')===0||nav.indexOf('iw')===0?'he':nav.indexOf('ar')===0?'ar':'en'));
+ btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set)})});
+})();
+</script>
 </body>
 </html>
