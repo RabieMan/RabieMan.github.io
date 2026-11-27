@@ -59,6 +59,8 @@ body{margin:0;font-family:Heebo,"Segoe UI",system-ui,sans-serif;background:var(-
 html[lang="ar"] body{font-family:Cairo,Heebo,"Segoe UI",system-ui,sans-serif}
 .wrap{max-width:980px;margin:0 auto;padding:24px 20px 60px}
 header{display:flex;align-items:center;gap:12px}
+.topnav{display:flex;gap:4px;margin-inline-start:auto}.topnav a{color:var(--mut);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:16px}.topnav a:hover{color:inherit;background:var(--card)}.topnav+.lang{margin-inline-start:8px}.anchor{display:block;position:relative;top:-16px;visibility:hidden}html{scroll-behavior:smooth}@media (max-width:760px){.topnav{display:none}.topnav+.lang{margin-inline-start:auto}}
+
 header img{width:48px;height:48px;border-radius:50%;box-shadow:0 0 16px rgba(80,200,255,.3)}
 .emblem{display:block;width:180px;height:180px;border-radius:50%;margin:0 0 26px;box-shadow:0 0 50px rgba(80,200,255,.25),0 0 90px rgba(255,140,0,.15)}
 .hrow{display:flex;align-items:center;gap:36px;margin-bottom:20px}.hrow .emblem{flex:none;margin:0}.hrow h1{margin:0}
@@ -123,6 +125,12 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
 <header>
  <img src="img/logo.png" alt="RabieMan Labs logo">
  <b>RabieMan Labs</b>
+ <nav class="topnav" aria-label="Sections">
+  <a href="#about"><span data-l="he">אודות</span><span data-l="ar">من نحن</span><span data-l="en">About</span></a>
+  <a href="#expertise"><span data-l="he">מומחיות</span><span data-l="ar">الخبرة</span><span data-l="en">Expertise</span></a>
+  <a href="#apps"><span data-l="he">אפליקציות</span><span data-l="ar">التطبيقات</span><span data-l="en">Apps</span></a>
+  <a href="#contact"><span data-l="he">צור קשר</span><span data-l="ar">تواصل</span><span data-l="en">Contact</span></a>
+ </nav>
  <div class="lang" role="group" aria-label="Language / שפה / اللغة">
   <button type="button" data-set="he" aria-pressed="true">עברית</button>
   <button type="button" data-set="ar" aria-pressed="false">العربية</button>
@@ -134,9 +142,9 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
  <div class="hrow">
  <img class="emblem" src="img/rabieman-labs.webp" alt="RabieMan Labs logo" width="180" height="180">
  <div>
- <h1 data-l="he">הנדסת תוכנה מתקדמת.<br><span>חוויית משתמש מוקפדת.</span></h1>
- <h1 data-l="ar">هندسة برمجيات متقدمة.<br><span>وتجربة مستخدم متقنة.</span></h1>
- <h1 data-l="en">Professional-grade engineering.<br><span>Crafted user experience.</span></h1>
+ <h1 data-l="he">הנדסת תוכנה מתקדמת. <br><span>חוויית משתמש מוקפדת.</span></h1>
+ <h1 data-l="ar">هندسة برمجيات متقدمة. <br><span>وتجربة مستخدم متقنة.</span></h1>
+ <h1 data-l="en">Professional-grade engineering. <br><span>Crafted user experience.</span></h1>
  </div>
  </div>
  <p data-l="he">RabieMan Labs היא מעבדת פיתוח וחדשנות המשלבת ניסיון רב-שנים בהנדסת תוכנה, ארכיטקטורת מערכות וענן, בינה מלאכותית ועיצוב חוויית משתמש (UI/UX). אנו מתכננים ובונים מוצרים דיגיטליים חכמים ומוקפדים ל-<bdi dir="ltr">Web</bdi>, <bdi dir="ltr">Android</bdi> ו-<bdi dir="ltr">iOS</bdi>, בעברית, בערבית ובאנגלית.</p>
@@ -144,6 +152,7 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
  <p data-l="en">RabieMan Labs is a software innovation studio combining years of deep expertise in software engineering, cloud architecture, AI and UI/UX design. We design and build intelligent, polished digital products across Web, Android and iOS, in Hebrew, Arabic and English.</p>
 </section>
 
+<a class="anchor" id="about"></a>
 <h2 data-l="he">אודות</h2>
 <h2 data-l="ar">من نحن</h2>
 <h2 data-l="en">About</h2>
@@ -157,11 +166,12 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
   <ul><li><b>مبنية كأنظمة المؤسسات:</b> آمنة وموثوقة وتتحسن باستمرار عبر عمليات تطوير ونشر مؤتمتة</li><li><b>تقنية معقدة، تجربة بسيطة:</b> ذكاء اصطناعي وتقنيات ثلاثية الأبعاد وبيانات، بتصميم نظيف وبديهي</li><li><b>الخصوصية أولاً منذ التصميم:</b> فقط البيانات الضرورية فعلاً، دون تسجيلات غير لازمة</li></ul>
  </div>
  <div data-l="en">
-  <p style="margin:0">RabieMan Labs was founded by a software engineer and certified cloud solutions architect with deep, hands-on experience building, securing and running large-scale enterprise systems. We bring that enterprise-grade discipline to independent apps, uniting deep engineering, cloud architecture, graphic design and human-centred UX under one roof to craft complete products refined down to the smallest detail:</p>
+  <p style="margin:0">RabieMan Labs was founded by a software engineer and certified cloud solutions architect with deep, hands-on experience building, securing and running large-scale enterprise systems. We bring that enterprise-grade discipline to independent apps, uniting deep engineering, cloud architecture, graphic design and human-centered UX under one roof to craft complete products refined down to the smallest detail:</p>
   <ul><li><b>Built like enterprise systems:</b> secure, reliable and continuously improved through automated delivery pipelines</li><li><b>Complex tech, simple experience:</b> AI, 3D and data, wrapped in clean, intuitive design</li><li><b>Privacy-first by design:</b> only the data that's truly needed, no unnecessary sign-ups</li></ul>
  </div>
 </div>
 
+<a class="anchor" id="expertise"></a>
 <h2 data-l="he">ניסיון ומומחיות</h2>
 <h2 data-l="ar">الخبرة والتخصص</h2>
 <h2 data-l="en">Experience &amp; expertise</h2>
@@ -172,7 +182,7 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
   <div class="tags" dir="ltr"><span>Cloud</span><span>System design</span><span>Security</span><span>CI/CD</span></div></div>
  <div class="cap" style="--c:#34d399"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></i>
   <b data-l="he">עיצוב גרפי וחוויית משתמש</b><b data-l="ar">التصميم الجرافيكي وتجربة المستخدم</b><b data-l="en">UI/UX &amp; visual design</b>
-  <p data-l="he">עיצוב ממשקים מרהיבים, מערכות עיצוב מוקפדות וחוויית משתמש אינטואיטיבית, המותאמת באופן טבעי לשלוש שפות.</p><p data-l="ar">تصميم واجهات جذابة وتجربة استخدام سلسة وبديهية مصممة بشكل طبيعي بثلاث لغات.</p><p data-l="en">Striking visual interfaces, cohesive design systems and intuitive user journeys, crafted natively in three languages.</p>
+  <p data-l="he">עיצוב ממשקים נקיים ומדויקים, מערכות עיצוב מוקפדות וחוויית משתמש אינטואיטיבית, המותאמת באופן טבעי לשלוש שפות.</p><p data-l="ar">تصميم واجهات نظيفة ومتقنة وتجربة استخدام سلسة وبديهية مصممة بشكل طبيعي بثلاث لغات.</p><p data-l="en">Clean, refined interfaces, cohesive design systems and intuitive user journeys, crafted natively in three languages.</p>
   <div class="tags" dir="ltr"><span>UI/UX</span><span>Design systems</span><span>HE · AR · EN</span></div></div>
  <div class="cap" style="--c:#ffb02e"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12 4 7.5"/></svg></i>
   <b data-l="he">תלת-ממד והדמיות אינטראקטיביות</b><b data-l="ar">رسوميات ثلاثية الأبعاد ومحاكاة تفاعلية</b><b data-l="en">3D &amp; interactive simulations</b>
@@ -188,9 +198,25 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
   <div class="tags" dir="ltr"><span>Android</span><span>iOS</span><span>Google Play</span><span>App Store</span></div></div>
 </div>
 
+<a class="anchor" id="apps"></a>
 <h2 data-l="he">האפליקציות שלנו</h2>
 <h2 data-l="ar">تطبيقاتنا</h2>
 <h2 data-l="en">Our apps</h2>
+<article class="app">
+ <div>
+  <div class="top"><img src="img/tabumap.png" alt=""><div><h3>TabuMap</h3><span class="tag" data-l="he">בקרוב ב-Google Play</span><span class="tag" data-l="ar">قريبًا على Google Play</span><span class="tag" data-l="en">Coming soon to Google Play</span><span class="tag ios" data-l="he">בקרוב ב-App Store</span><span class="tag ios" data-l="ar">قريبًا على App Store</span><span class="tag ios" data-l="en">Coming soon to the App Store</span></div></div>
+  <p data-l="he">על איזו חלקה אתם עומדים? גוש וחלקה בשטח, לפי GPS.</p>
+  <p data-l="ar">على أي قسيمة تقف؟ الحوض والقسيمة في الميدان، حسب الـ GPS.</p>
+  <p data-l="en">Which parcel are you standing on? Land block and parcel in the field, by GPS.</p>
+  <ul data-l="he"><li>איתור גוש וחלקה לפי GPS, עם התראה כשאתם ליד גבול</li><li>חיפוש גוש וחלקה בכל הארץ, עם גבולות המגרשים על המפה</li><li>ייעוד הקרקע ותוכניות הבנייה לכל חלקה, עם קישור למבא״ת</li><li>מדידת חלקה בלחיצה: אורך כל צלע, היקף ושטח בדונם, ונ״צ רשת ישראל בזמן אמת</li><li>נעצים למיקומים בשטח, Street View, GovMap ונסח טאבו</li><li>בעברית, בערבית ובאנגלית</li><li>בהמשך: מפענח נסחי טאבו בשפה פשוטה</li></ul>
+  <ul data-l="ar"><li>تحديد الحوض والقسيمة حسب الـ GPS، مع تنبيه عند الاقتراب من الحدود</li><li>البحث حسب الحوض والقسيمة في كل البلاد، مع حدود القسائم على الخارطة</li><li>تخصيص الأرض والخرائط الهيكلية لكل قسيمة، مع رابط إلى موقع التخطيط</li><li>قياس القسيمة بنقرة: طول كل ضلع، المحيط والمساحة بالدونم، وإحداثيات الشبكة الإسرائيلية مباشرةً</li><li>دبابيس للمواقع في الميدان، Street View وGovMap ونسخة طابو</li><li>بالعربية والعبرية والإنجليزية</li><li>قريبًا: محلل لنسخ الطابو بلغة بسيطة</li></ul>
+  <ul data-l="en"><li>Find the block and parcel from your GPS position, with a warning near boundaries</li><li>Search any block and parcel in Israel, with boundaries on the map</li><li>Land use and building plans for every parcel, with a link to the plan</li><li>Measure a parcel in one tap: each side, perimeter and area in dunams, plus live Israeli Grid (ITM) coordinates</li><li>Pins for places in the field, Street View, GovMap and the land registry extract</li><li>In Hebrew, Arabic and English</li><li>Coming next: a plain-language Tabu extract analyzer</li></ul>
+  <a class="btn" href="https://rabieman.github.io/tabumap-site/"><span data-l="he">לאתר האפליקציה</span><span data-l="ar">موقع التطبيق</span><span data-l="en">App website</span></a>
+  <a class="btn ghost" href="https://rabieman.github.io/tabumap-site/privacy.html"><span data-l="he">פרטיות</span><span data-l="ar">الخصوصية</span><span data-l="en">Privacy</span></a>
+ </div>
+ <img class="shot" data-l="he" src="img/tabumap-shot-he.jpg?v=5" alt="TabuMap"><img class="shot" data-l="ar" src="img/tabumap-shot-ar.jpg?v=5" alt="TabuMap"><img class="shot" data-l="en" src="img/tabumap-shot-en.jpg?v=5" alt="TabuMap">
+</article>
+
 <article class="app">
  <div>
   <div class="top"><img src="img/rechevlab.png" alt=""><div><h3>RechevLab</h3><span class="tag" data-l="he">בקרוב ב-Google Play</span><span class="tag" data-l="ar">قريبًا على Google Play</span><span class="tag" data-l="en">Coming soon to Google Play</span><span class="tag ios" data-l="he">בקרוב ב-App Store</span><span class="tag ios" data-l="ar">قريبًا على App Store</span><span class="tag ios" data-l="en">Coming soon to the App Store</span></div></div>
@@ -199,26 +225,11 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
   <p data-l="en">Everything you need to know about a car, in one app.</p>
   <ul data-l="he"><li>בדיקת רכב לפי מספר רישוי (גם בסריקה במצלמה) או לפי מספר שלדה</li><li>ריקולים פתוחים, טסט, ק"מ, היסטוריית בעלות ומחיר מחירון</li><li>בדיקה לפני קנייה, בדיקת תו נכה ודוח PDF לשיתוף</li><li>תזכורות לחידוש רישיון</li><li>מוסך תלת-ממד שמסביר כל חלק ברכב</li></ul>
   <ul data-l="ar"><li>فحص السيارة حسب رقم اللوحة (كتابةً أو بالمسح بالكاميرا) أو رقم الشاصي</li><li>الاستدعاءات المفتوحة، الفحص، الكيلومترات، تاريخ الملكية والسعر</li><li>فحص قبل الشراء، فحص شارة الإعاقة وتقرير PDF للمشاركة</li><li>تذكيرات تجديد الترخيص</li><li>ورشة ثلاثية الأبعاد تشرح كل قطعة في السيارة</li></ul>
-  <ul data-l="en"><li>Lookup by licence plate (typed or scanned) or by VIN</li><li>Open recalls, test, mileage, ownership history and list price</li><li>Pre-purchase check, disability-tag check and a shareable PDF report</li><li>Licence-renewal reminders</li><li>A 3D workshop that explains every part of the car</li></ul>
+  <ul data-l="en"><li>Lookup by license plate (typed or scanned) or by VIN</li><li>Open recalls, test, mileage, ownership history and list price</li><li>Pre-purchase check, disability-tag check and a shareable PDF report</li><li>License-renewal reminders</li><li>A 3D workshop that explains every part of the car</li></ul>
   <a class="btn" href="https://rabieman.github.io/rechevlab-site/"><span data-l="he">לאתר האפליקציה</span><span data-l="ar">موقع التطبيق</span><span data-l="en">App website</span></a>
   <a class="btn ghost" href="https://rabieman.github.io/rechevlab-site/privacy.html"><span data-l="he">פרטיות</span><span data-l="ar">الخصوصية</span><span data-l="en">Privacy</span></a>
  </div>
  <img class="shot" src="img/rechevlab-shot.jpg" alt="RechevLab">
-</article>
-
-<article class="app">
- <div>
-  <div class="top"><img src="img/tabumap.png" alt=""><div><h3>TabuMap</h3><span class="tag" data-l="he">בקרוב ב-Google Play</span><span class="tag" data-l="ar">قريباً على Google Play</span><span class="tag" data-l="en">Coming soon to Google Play</span><span class="tag ios" data-l="he">בקרוב ב-App Store</span><span class="tag ios" data-l="ar">قريبًا على App Store</span><span class="tag ios" data-l="en">Coming soon to the App Store</span></div></div>
-  <p data-l="he">על איזו חלקה אתם עומדים? גוש וחלקה בשטח, לפי GPS.</p>
-  <p data-l="ar">على أي قسيمة تقف؟ الحوض والقسيمة في الميدان، حسب الـ GPS.</p>
-  <p data-l="en">Which parcel are you standing on? Land block and parcel in the field, by GPS.</p>
-  <ul data-l="he"><li>איתור גוש וחלקה לפי GPS, עם התראה כשאתם ליד גבול</li><li>חיפוש גוש וחלקה בכל הארץ, עם גבולות המגרשים על המפה</li><li>ייעוד הקרקע ותוכניות הבנייה לכל חלקה, עם קישור למבא״ת</li><li>מדידת חלקה בלחיצה: אורך כל צלע, היקף ושטח בדונם, ונ״צ רשת ישראל בזמן אמת</li><li>נעצים למיקומים בשטח, Street View, GovMap ונסח טאבו</li><li>בעברית, בערבית ובאנגלית</li><li>בהמשך: מפענח נסחי טאבו בשפה פשוטה</li></ul>
-  <ul data-l="ar"><li>تحديد الحوض والقسيمة حسب الـ GPS، مع تنبيه عند الاقتراب من الحدود</li><li>البحث حسب الحوض والقسيمة في كل البلاد، مع حدود القسائم على الخارطة</li><li>تخصيص الأرض والخرائط الهيكلية لكل قسيمة، مع رابط إلى موقع التخطيط</li><li>قياس القسيمة بنقرة: طول كل ضلع، المحيط والمساحة بالدونم، وإحداثيات الشبكة الإسرائيلية مباشرةً</li><li>دبابيس للمواقع في الميدان، Street View وGovMap ونسخة طابو</li><li>بالعربية والعبرية والإنجليزية</li><li>قريباً: محلل لنسخ الطابو بلغة بسيطة</li></ul>
-  <ul data-l="en"><li>Find the block and parcel from your GPS position, with a warning near boundaries</li><li>Search any block and parcel in Israel, with boundaries on the map</li><li>Land use and building plans for every parcel, with a link to the plan</li><li>Measure a parcel in one tap: each side, perimeter and area in dunams, plus live Israeli Grid (ITM) coordinates</li><li>Pins for places in the field, Street View, GovMap and the land registry extract</li><li>In Hebrew, Arabic and English</li><li>Coming next: a plain-language Tabu extract analyzer</li></ul>
-  <a class="btn" href="https://rabieman.github.io/tabumap-site/"><span data-l="he">לאתר האפליקציה</span><span data-l="ar">موقع التطبيق</span><span data-l="en">App website</span></a>
-  <a class="btn ghost" href="https://rabieman.github.io/tabumap-site/privacy.html"><span data-l="he">פרטיות</span><span data-l="ar">الخصوصية</span><span data-l="en">Privacy</span></a>
- </div>
- <img class="shot" data-l="he" src="img/tabumap-shot-he.jpg?v=5" alt="TabuMap"><img class="shot" data-l="ar" src="img/tabumap-shot-ar.jpg?v=5" alt="TabuMap"><img class="shot" data-l="en" src="img/tabumap-shot-en.jpg?v=5" alt="TabuMap">
 </article>
 
 <article class="app">
@@ -236,17 +247,19 @@ html[lang="he"] [data-l]:not([data-l="he"]),html[lang="en"] [data-l]:not([data-l
  <img class="shot" src="img/nominacode-shot.jpg" alt="NominaCode">
 </article>
 
+<a class="anchor" id="contact"></a>
 <h2 data-l="he">יצירת קשר</h2>
 <h2 data-l="ar">تواصل معنا</h2>
 <h2 data-l="en">Contact</h2>
 <div class="cbox">
  <div class="cico" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></div>
  <div class="ctx">
-  <h3><span data-l="he">יש שאלה, רעיון או הצעה לשיתוף פעולה?</span><span data-l="ar">لديك سؤال أو فكرة أو اقتراح للتعاون؟</span><span data-l="en">A question, an idea or a partnership in mind?</span></h3>
+  <h3><span data-l="he">יש שאלה, משוב או רעיון לשיפור?</span><span data-l="ar">لديك سؤال أو ملاحظة أو فكرة للتحسين؟</span><span data-l="en">Feedback, a bug report or a feature idea?</span></h3>
   <p><span data-l="he">נשמח לשמוע ממך. משוב על האפליקציות, דיווח על תקלה או כל פנייה אחרת – אנחנו עונים בדרך כלל תוך יום-יומיים.</span><span data-l="ar">يسعدنا أن نسمع منك – ملاحظات على التطبيقات، بلاغ عن عطل أو أي استفسار آخر. نردّ عادةً خلال يوم أو يومين.</span><span data-l="en">We'd love to hear from you – app feedback, a bug report or anything else. We usually reply within a day or two.</span></p>
   <div class="cact">
-   <a class="btn" href="mailto:rabieman.labs@gmail.com"><span data-l="he">שליחת מייל</span><span data-l="ar">إرسال بريد</span><span data-l="en">Send an e-mail</span></a>
+   <a class="btn" href="mailto:rabieman.labs@gmail.com"><span data-l="he">שליחת מייל</span><span data-l="ar">إرسال بريد</span><span data-l="en">Send an email</span></a>
    <button class="btn ghost" type="button" id="copyMail" title="Copy · העתקה · نسخ">📋 <span class="cmTx" dir="ltr">rabieman.labs@gmail.com</span> <span class="cmOk" hidden>✓</span></button>
+     <a class="btn ghost" href="https://github.com/RabieMan" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="vertical-align:-3px"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> GitHub</a>
   </div>
  </div>
 </div>
